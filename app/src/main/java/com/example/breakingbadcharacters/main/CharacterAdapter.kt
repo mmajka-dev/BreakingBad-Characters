@@ -55,6 +55,7 @@ class CharacterAdapter(val characters: ArrayList<CharacterItem>, val onClickList
                 return filterResults
             }
 
+            @Suppress("UNCHECKED_CAST")
             override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
                 characterFilterList = results?.values as ArrayList<CharacterItem>
                 notifyDataSetChanged()
